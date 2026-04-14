@@ -4269,45 +4269,45 @@
 <h1 id="11">1.1 &nbsp; Алгоритмы повсюду<a class="headerlink" href="#11" title="Permanent link">&para;</a></h1>
 <p>Говоря об алгоритмах, естественно вспомнить о математике. Однако на самом деле многие алгоритмы не связаны со сложной математикой, а больше полагаются на базовую логику, которая повсеместно встречается в нашей повседневной жизни.</p>
 <p>Прежде чем углубиться в обсуждение алгоритмов, стоит упомянуть интересный факт: <strong>вы уже точно освоили множество алгоритмов и привыкли применять их в повседневной жизни</strong>. Далее приведем несколько конкретных примеров, чтобы подтвердить этот факт.</p>
-<p><strong>Пример 1: поиск в словаре</strong>. В словаре все слова упорядочены по алфавиту. Предположим, нам нужно найти слово, начинающееся на букву <span class="arithmatex">\(r\)</span>; обычно для этого нужно выполнить следующие действия.</p>
+<p><strong>Пример 1: поиск в словаре</strong>. В словаре все слова упорядочены по алфавиту. Предположим, нам нужно найти слово, начинающееся на букву <span class="arithmatex">\(r\)</span>. Обычно это делают так, как показано на рисунке 1-1.</p>
 <ol>
-<li>Откройте словарь примерно на половине страниц и посмотрите, какая буква является первой на этой странице; предположим, это буква <span class="arithmatex">\(m\)</span>.</li>
+<li>Откройте словарь примерно на половине страниц и посмотрите, какая буква является первой на этой странице. Предположим, это буква <span class="arithmatex">\(m\)</span>.</li>
 <li>Поскольку в алфавите буква <span class="arithmatex">\(r\)</span> идет после <span class="arithmatex">\(m\)</span>, исключаем первую половину словаря, и область поиска сужается до второй половины.</li>
 <li>Продолжайте повторять шаги <code>1.</code> и <code>2.</code> , пока не найдете страницу, где первой буквой слов будет <span class="arithmatex">\(r\)</span>.</li>
 </ol>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">&lt;1&gt;</label><label for="__tabbed_1_2">&lt;2&gt;</label><label for="__tabbed_1_3">&lt;3&gt;</label><label for="__tabbed_1_4">&lt;4&gt;</label><label for="__tabbed_1_5">&lt;5&gt;</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img alt="Этапы поиска в словаре. Шаг 1" class="animation-figure" src="../algorithms_are_everywhere.assets/binary_search_dictionary_step1.png" /></p>
+<p><img alt="Этапы поиска в словаре" class="animation-figure" src="../algorithms_are_everywhere.assets/binary_search_dictionary_step1.png" /></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="Этапы поиска в словаре. Шаг 2" class="animation-figure" src="../algorithms_are_everywhere.assets/binary_search_dictionary_step2.png" /></p>
+<p><img alt="binary_search_dictionary_step2" class="animation-figure" src="../algorithms_are_everywhere.assets/binary_search_dictionary_step2.png" /></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="Этапы поиска в словаре. Шаг 3" class="animation-figure" src="../algorithms_are_everywhere.assets/binary_search_dictionary_step3.png" /></p>
+<p><img alt="binary_search_dictionary_step3" class="animation-figure" src="../algorithms_are_everywhere.assets/binary_search_dictionary_step3.png" /></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="Этапы поиска в словаре. Шаг 4" class="animation-figure" src="../algorithms_are_everywhere.assets/binary_search_dictionary_step4.png" /></p>
+<p><img alt="binary_search_dictionary_step4" class="animation-figure" src="../algorithms_are_everywhere.assets/binary_search_dictionary_step4.png" /></p>
 </div>
 <div class="tabbed-block">
-<p><img alt="Этапы поиска в словаре. Шаг 5" class="animation-figure" src="../algorithms_are_everywhere.assets/binary_search_dictionary_step5.png" /></p>
+<p><img alt="binary_search_dictionary_step5" class="animation-figure" src="../algorithms_are_everywhere.assets/binary_search_dictionary_step5.png" /></p>
 </div>
 </div>
 </div>
-<p align="center"> Рисунок 1-1 &nbsp; Этапы поиска в словаре. Шаг 1 </p>
+<p align="center"> Рисунок 1-1 &nbsp; Этапы поиска в словаре </p>
 
-<p>Навык поиска в словаре, которым владеет каждый школьник, на самом деле является известным алгоритмом двоичного поиска. С точки зрения структуры данных словарь можно рассматривать как отсортированный массив; с точки зрения алгоритма последовательность операций по поиску в словаре можно считать двоичным поиском.</p>
-<p><strong>Пример 2: упорядочивание карт</strong>. Во время игры в карты необходимо каждый раз упорядочивать карты в руке от меньшего к большему. Для этого нужно выполнить следующие действия.</p>
+<p>Навык поиска в словаре, которым владеет каждый школьник, на самом деле является известным алгоритмом двоичного поиска. С точки зрения структуры данных словарь можно рассматривать как отсортированный массив. С точки зрения алгоритма последовательность операций по поиску в словаре можно считать двоичным поиском.</p>
+<p><strong>Пример 2: упорядочивание карт</strong>. Во время игры в карты необходимо каждый раз упорядочивать карты в руке от меньшего к большему. Обычно это делают так, как показано на рисунке 1-2.</p>
 <ol>
 <li>Разделите карты на упорядоченную и неупорядоченную части, предполагая, что изначально самая левая карта уже упорядочена.</li>
-<li>Из неупорядоченной части извлеките одну карту и вставьте ее в правильное место в упорядоченной части; после этого две самые левые карты станут упорядоченными.</li>
+<li>Из неупорядоченной части извлеките одну карту и вставьте ее в правильное место в упорядоченной части. После этого две самые левые карты станут упорядоченными.</li>
 <li>Повторяйте шаг <code>2.</code> , каждый раз перемещая одну карту из неупорядоченной части в упорядоченную, пока все карты не станут упорядоченными.</li>
 </ol>
 <p><img alt="Этапы упорядочивания карт" class="animation-figure" src="../algorithms_are_everywhere.assets/playing_cards_sorting.png" /></p>
 <p align="center"> Рисунок 1-2 &nbsp; Этапы упорядочивания карт </p>
 
 <p>Метод упорядочивания карт по своей сути является алгоритмом сортировки вставками, который весьма эффективен при обработке небольших наборов данных. Многие функции сортировки в библиотеках программирования используют именно этот алгоритм.</p>
-<p><strong>Пример 3: сдача</strong>. Предположим, что в супермаркете мы купили товар стоимостью <span class="arithmatex">\(69\)</span> руб. и дали кассиру купюру в <span class="arithmatex">\(100\)</span> руб. Кассир должен вернуть нам <span class="arithmatex">\(31\)</span> руб. Для этого ему нужно выполнить следующие действия.</p>
+<p><strong>Пример 3: сдача</strong>. Предположим, что в супермаркете мы купили товар стоимостью <span class="arithmatex">\(69\)</span> руб. и дали кассиру купюру в <span class="arithmatex">\(100\)</span> руб. Кассир должен вернуть нам <span class="arithmatex">\(31\)</span> руб. Обычно он рассуждает так, как показано на рисунке 1-3.</p>
 <ol>
 <li>Варианты выбора - это купюры номиналом меньше <span class="arithmatex">\(31\)</span> руб. Пусть у нас имеются номиналы <span class="arithmatex">\(1\)</span> , <span class="arithmatex">\(5\)</span> , <span class="arithmatex">\(10\)</span> и <span class="arithmatex">\(20\)</span> руб.</li>
 <li>Возьмем самую крупную доступную купюру в <span class="arithmatex">\(20\)</span> руб. Остаток сдачи составит <span class="arithmatex">\(31 - 20 = 11\)</span> руб.</li>

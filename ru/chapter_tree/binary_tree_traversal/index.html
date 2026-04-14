@@ -4473,12 +4473,12 @@
 <p>К распространенным способам обхода двоичного дерева относятся обход по уровням, прямой обход, симметричный обход и обратный обход.</p>
 <h2 id="721">7.2.1 &nbsp; Обход по уровням<a class="headerlink" href="#721" title="Permanent link">&para;</a></h2>
 <p>Как показано на рисунке 7-9, <u>обход по уровням (level-order traversal)</u> проходит двоичное дерево сверху вниз по уровням и на каждом уровне посещает узлы слева направо.</p>
-<p>По своей сути обход по уровням относится к <u>обходу в ширину (breadth-first traversal)</u>, также называемому <u>поиском в ширину (breadth-first search, BFS)</u>; он отражает идею "расширяться от центра к периферии слой за слоем".</p>
+<p>По своей сути обход по уровням относится к <u>обходу в ширину (breadth-first traversal)</u>, также называемому <u>поиском в ширину (breadth-first search, BFS)</u>. Он отражает идею «расширяться от центра к периферии слой за слоем».</p>
 <p><img alt="Обход двоичного дерева по уровням" class="animation-figure" src="../binary_tree_traversal.assets/binary_tree_bfs.png" /></p>
 <p align="center"> Рисунок 7-9 &nbsp; Обход двоичного дерева по уровням </p>
 
 <h3 id="1">1. &nbsp; Код реализации<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
-<p>Обход в ширину обычно реализуется с помощью "очереди". Очередь подчиняется правилу "первым пришел - первым вышел", а обход в ширину подчиняется правилу "продвигаться по уровням", поэтому стоящая за ними идея согласована. Код реализации приведен ниже:</p>
+<p>Обход в ширину обычно реализуется с помощью «очереди». Очередь подчиняется правилу «первым пришел - первым вышел», а обход в ширину подчиняется правилу «продвигаться по уровням», поэтому стоящая за ними идея согласована. Код реализации приведен ниже:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:13"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><input id="__tabbed_1_8" name="__tabbed_1" type="radio" /><input id="__tabbed_1_9" name="__tabbed_1" type="radio" /><input id="__tabbed_1_10" name="__tabbed_1" type="radio" /><input id="__tabbed_1_11" name="__tabbed_1" type="radio" /><input id="__tabbed_1_12" name="__tabbed_1" type="radio" /><input id="__tabbed_1_13" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Python</label><label for="__tabbed_1_2">C++</label><label for="__tabbed_1_3">Java</label><label for="__tabbed_1_4">C#</label><label for="__tabbed_1_5">Go</label><label for="__tabbed_1_6">Swift</label><label for="__tabbed_1_7">JS</label><label for="__tabbed_1_8">TS</label><label for="__tabbed_1_9">Dart</label><label for="__tabbed_1_10">Rust</label><label for="__tabbed_1_11">C</label><label for="__tabbed_1_12">Kotlin</label><label for="__tabbed_1_13">Ruby</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -4780,7 +4780,7 @@
 <li><strong>Пространственная сложность равна <span class="arithmatex">\(O(n)\)</span></strong> : в худшем случае, то есть для полной двоичной деревообразной структуры, до достижения самого нижнего уровня в очереди одновременно может находиться до <span class="arithmatex">\((n + 1) / 2\)</span> узлов, что требует <span class="arithmatex">\(O(n)\)</span> памяти.</li>
 </ul>
 <h2 id="722">7.2.2 &nbsp; Прямой, симметричный и обратный обходы<a class="headerlink" href="#722" title="Permanent link">&para;</a></h2>
-<p>Соответственно, прямой, симметричный и обратный обходы относятся к <u>обходу в глубину (depth-first traversal)</u>, также называемому <u>поиском в глубину (depth-first search, DFS)</u>; он отражает идею "сначала идти до конца, затем возвращаться и продолжать".</p>
+<p>Соответственно, прямой, симметричный и обратный обходы относятся к <u>обходу в глубину (depth-first traversal)</u>, также называемому <u>поиском в глубину (depth-first search, DFS)</u>. Он отражает идею «сначала идти до конца, затем возвращаться и продолжать».</p>
 <p>На рисунке 7-10 показан принцип работы обхода двоичного дерева в глубину. <strong>Обход в глубину можно представить как обход всей двоичной структуры по внешнему контуру</strong> , и у каждого узла встречаются три позиции, соответствующие прямому, симметричному и обратному обходам.</p>
 <p><img alt="Прямой, симметричный и обратный обходы двоичного дерева поиска" class="animation-figure" src="../binary_tree_traversal.assets/binary_tree_dfs.png" /></p>
 <p align="center"> Рисунок 7-10 &nbsp; Прямой, симметричный и обратный обходы двоичного дерева поиска </p>
@@ -5233,12 +5233,12 @@
 </details>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Поиск в глубину можно реализовать и итеративно; заинтересованные читатели могут изучить это самостоятельно.</p>
+<p>Поиск в глубину можно реализовать и итеративно. Заинтересованные читатели могут изучить это самостоятельно.</p>
 </div>
-<p>На рисунках ниже показан рекурсивный процесс прямого обхода двоичного дерева. Его можно разделить на две противоположные части: "вход в рекурсию" и "возврат".</p>
+<p>На рисунке 7-11 показан рекурсивный процесс прямого обхода двоичного дерева. Его можно разделить на две противоположные части: «вход в рекурсию» и «возврат».</p>
 <ol>
-<li>"Вход в рекурсию" означает запуск нового вызова функции; в этом процессе программа переходит к следующему узлу.</li>
-<li>"Возврат" означает завершение вызова функции и возврат назад, то есть текущий узел уже полностью обработан.</li>
+<li>«Вход в рекурсию» означает запуск нового вызова функции. В этом процессе программа переходит к следующему узлу.</li>
+<li>«Возврат» означает завершение вызова функции и возврат назад, то есть текущий узел уже полностью обработан.</li>
 </ol>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:11"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><input id="__tabbed_3_5" name="__tabbed_3" type="radio" /><input id="__tabbed_3_6" name="__tabbed_3" type="radio" /><input id="__tabbed_3_7" name="__tabbed_3" type="radio" /><input id="__tabbed_3_8" name="__tabbed_3" type="radio" /><input id="__tabbed_3_9" name="__tabbed_3" type="radio" /><input id="__tabbed_3_10" name="__tabbed_3" type="radio" /><input id="__tabbed_3_11" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">&lt;1&gt;</label><label for="__tabbed_3_2">&lt;2&gt;</label><label for="__tabbed_3_3">&lt;3&gt;</label><label for="__tabbed_3_4">&lt;4&gt;</label><label for="__tabbed_3_5">&lt;5&gt;</label><label for="__tabbed_3_6">&lt;6&gt;</label><label for="__tabbed_3_7">&lt;7&gt;</label><label for="__tabbed_3_8">&lt;8&gt;</label><label for="__tabbed_3_9">&lt;9&gt;</label><label for="__tabbed_3_10">&lt;10&gt;</label><label for="__tabbed_3_11">&lt;11&gt;</label></div>
 <div class="tabbed-content">

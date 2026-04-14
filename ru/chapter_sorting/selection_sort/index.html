@@ -4336,7 +4336,7 @@
 <!-- Page content -->
 <h1 id="112">11.2 &nbsp; Сортировка выбором<a class="headerlink" href="#112" title="Permanent link">&para;</a></h1>
 <p><u>Сортировка выбором (selection sort)</u> работает очень просто: запускается цикл, и на каждом шаге из неотсортированного диапазона выбирается минимальный элемент, после чего он переносится в конец уже отсортированного диапазона.</p>
-<p>Пусть длина массива равна <span class="arithmatex">\(n\)</span> ; тогда процесс сортировки выбором выглядит так, как показано на рисунке 11-2.</p>
+<p>Пусть длина массива равна <span class="arithmatex">\(n\)</span>. Тогда процесс сортировки выбором выглядит так, как показано на рисунке 11-2.</p>
 <ol>
 <li>В начальном состоянии все элементы не отсортированы, то есть неотсортированный диапазон индексов равен <span class="arithmatex">\([0, n-1]\)</span> .</li>
 <li>Выбрать минимальный элемент из диапазона <span class="arithmatex">\([0, n-1]\)</span> и поменять его местами с элементом в позиции <span class="arithmatex">\(0\)</span> . После этого первый элемент массива отсортирован.</li>
@@ -4642,7 +4642,7 @@
 </details>
 <h2 id="1121">11.2.1 &nbsp; Характеристики алгоритма<a class="headerlink" href="#1121" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>Временная сложность равна <span class="arithmatex">\(O(n^2)\)</span>, сортировка не является адаптивной</strong>: внешний цикл выполняется <span class="arithmatex">\(n - 1\)</span> раз; в первом раунде длина неотсортированного диапазона равна <span class="arithmatex">\(n\)</span> , а в последнем - <span class="arithmatex">\(2\)</span> , то есть отдельные раунды содержат <span class="arithmatex">\(n\)</span>, <span class="arithmatex">\(n - 1\)</span>, <span class="arithmatex">\(\dots\)</span>, <span class="arithmatex">\(3\)</span>, <span class="arithmatex">\(2\)</span> проходов внутреннего цикла, их сумма равна <span class="arithmatex">\(\frac{(n - 1)(n + 2)}{2}\)</span> .</li>
+<li><strong>Временная сложность равна <span class="arithmatex">\(O(n^2)\)</span>, сортировка не является адаптивной</strong>: внешний цикл выполняется <span class="arithmatex">\(n - 1\)</span> раз. В первом раунде длина неотсортированного диапазона равна <span class="arithmatex">\(n\)</span> , а в последнем - <span class="arithmatex">\(2\)</span> , то есть отдельные раунды содержат <span class="arithmatex">\(n\)</span>, <span class="arithmatex">\(n - 1\)</span>, <span class="arithmatex">\(\dots\)</span>, <span class="arithmatex">\(3\)</span>, <span class="arithmatex">\(2\)</span> проходов внутреннего цикла, их сумма равна <span class="arithmatex">\(\frac{(n - 1)(n + 2)}{2}\)</span> .</li>
 <li><strong>Пространственная сложность равна <span class="arithmatex">\(O(1)\)</span>, сортировка выполняется на месте</strong>: указатели <span class="arithmatex">\(i\)</span> и <span class="arithmatex">\(j\)</span> используют константный объем дополнительной памяти.</li>
 <li><strong>Нестабильная сортировка</strong>: как показано на рисунке 11-3, элемент <code>nums[i]</code> может быть переставлен вправо от другого равного ему элемента, из-за чего их относительный порядок изменится.</li>
 </ul>

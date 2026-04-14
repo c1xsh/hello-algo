@@ -4657,7 +4657,7 @@
 
 <!-- Page content -->
 <h1 id="75-avl-">7.5 &nbsp; AVL-дерево *<a class="headerlink" href="#75-avl-" title="Permanent link">&para;</a></h1>
-<p>В разделе "Двоичное дерево поиска" мы упоминали, что после многократных операций вставки и удаления узлов двоичное дерево поиска может выродиться в связный список. В таком случае временная сложность всех операций ухудшается с <span class="arithmatex">\(O(\log n)\)</span> до <span class="arithmatex">\(O(n)\)</span> .</p>
+<p>В разделе «Двоичное дерево поиска» мы упоминали, что после многократных операций вставки и удаления узлов двоичное дерево поиска может выродиться в связный список. В таком случае временная сложность всех операций ухудшается с <span class="arithmatex">\(O(\log n)\)</span> до <span class="arithmatex">\(O(n)\)</span> .</p>
 <p>Как показано на рисунке 7-24, после двух операций удаления узлов это двоичное дерево поиска вырождается в связный список.</p>
 <p><img alt="Деградация AVL-дерева после удаления узлов" class="animation-figure" src="../avl_tree.assets/avltree_degradation_from_removing_node.png" /></p>
 <p align="center"> Рисунок 7-24 &nbsp; Деградация AVL-дерева после удаления узлов </p>
@@ -4666,7 +4666,7 @@
 <p><img alt="Деградация AVL-дерева после вставки узлов" class="animation-figure" src="../avl_tree.assets/avltree_degradation_from_inserting_node.png" /></p>
 <p align="center"> Рисунок 7-25 &nbsp; Деградация AVL-дерева после вставки узлов </p>
 
-<p>В 1962 году Г. М. Adelson-Velsky и Е. М. Landis в статье "An algorithm for the organization of information" предложили <u>AVL-дерево</u>. В статье подробно описан набор операций, гарантирующий, что при непрерывном добавлении и удалении узлов AVL-дерево не вырождается, благодаря чему временная сложность различных операций сохраняется на уровне <span class="arithmatex">\(O(\log n)\)</span> . Иначе говоря, в сценариях, где часто выполняются вставка, удаление, поиск и изменение, AVL-дерево всегда поддерживает эффективную работу с данными и потому имеет высокую практическую ценность.</p>
+<p>В 1962 году Г. М. Adelson-Velsky и Е. М. Landis в статье «An algorithm for the organization of information» предложили <u>AVL-дерево</u>. В статье подробно описан набор операций, гарантирующий, что при непрерывном добавлении и удалении узлов AVL-дерево не вырождается, благодаря чему временная сложность различных операций сохраняется на уровне <span class="arithmatex">\(O(\log n)\)</span> . Иначе говоря, в сценариях, где часто выполняются вставка, удаление, поиск и изменение, AVL-дерево всегда поддерживает эффективную работу с данными и потому имеет высокую практическую ценность.</p>
 <h2 id="751-avl-">7.5.1 &nbsp; Распространенные термины AVL-дерева<a class="headerlink" href="#751-avl-" title="Permanent link">&para;</a></h2>
 <p>AVL-дерево одновременно является и двоичным деревом поиска, и сбалансированным двоичным деревом, то есть одновременно удовлетворяет всем свойствам обеих этих структур. Поэтому AVL-дерево является разновидностью <u>сбалансированного двоичного дерева поиска (balanced binary search tree)</u>.</p>
 <h3 id="1">1. &nbsp; Высота узла<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
@@ -4857,7 +4857,7 @@
 </div>
 </div>
 </div>
-<p>"Высота узла" означает расстояние от этого узла до самого удаленного листового узла, то есть число пройденных "ребер". Особенно важно помнить, что высота листового узла равна <span class="arithmatex">\(0\)</span> , а высота пустого узла равна <span class="arithmatex">\(-1\)</span> . Мы создадим две вспомогательные функции: одну для получения высоты узла, другую для ее обновления:</p>
+<p>«Высота узла» означает расстояние от этого узла до самого удаленного листового узла, то есть число пройденных «ребер». Особенно важно помнить, что высота листового узла равна <span class="arithmatex">\(0\)</span> , а высота пустого узла равна <span class="arithmatex">\(-1\)</span> . Мы создадим две вспомогательные функции: одну для получения высоты узла, другую для ее обновления:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:13"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><input id="__tabbed_2_6" name="__tabbed_2" type="radio" /><input id="__tabbed_2_7" name="__tabbed_2" type="radio" /><input id="__tabbed_2_8" name="__tabbed_2" type="radio" /><input id="__tabbed_2_9" name="__tabbed_2" type="radio" /><input id="__tabbed_2_10" name="__tabbed_2" type="radio" /><input id="__tabbed_2_11" name="__tabbed_2" type="radio" /><input id="__tabbed_2_12" name="__tabbed_2" type="radio" /><input id="__tabbed_2_13" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Python</label><label for="__tabbed_2_2">C++</label><label for="__tabbed_2_3">Java</label><label for="__tabbed_2_4">C#</label><label for="__tabbed_2_5">Go</label><label for="__tabbed_2_6">Swift</label><label for="__tabbed_2_7">JS</label><label for="__tabbed_2_8">TS</label><label for="__tabbed_2_9">Dart</label><label for="__tabbed_2_10">Rust</label><label for="__tabbed_2_11">C</label><label for="__tabbed_2_12">Kotlin</label><label for="__tabbed_2_13">Ruby</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -5074,7 +5074,7 @@
 </div>
 </div>
 <h3 id="2-">2. &nbsp; Баланс-фактор узла<a class="headerlink" href="#2-" title="Permanent link">&para;</a></h3>
-<p><u>Баланс-фактор (balance factor)</u> узла определяется как высота левого поддерева минус высота правого поддерева; при этом баланс-фактор пустого узла считается равным <span class="arithmatex">\(0\)</span> . Мы также инкапсулируем получение баланс-фактора в отдельную функцию, чтобы потом было удобнее ее использовать:</p>
+<p><u>Баланс-фактор (balance factor)</u> узла определяется как высота левого поддерева минус высота правого поддерева. При этом баланс-фактор пустого узла считается равным <span class="arithmatex">\(0\)</span> . Мы также инкапсулируем получение баланс-фактора в отдельную функцию, чтобы потом было удобнее ее использовать:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:13"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><input id="__tabbed_3_5" name="__tabbed_3" type="radio" /><input id="__tabbed_3_6" name="__tabbed_3" type="radio" /><input id="__tabbed_3_7" name="__tabbed_3" type="radio" /><input id="__tabbed_3_8" name="__tabbed_3" type="radio" /><input id="__tabbed_3_9" name="__tabbed_3" type="radio" /><input id="__tabbed_3_10" name="__tabbed_3" type="radio" /><input id="__tabbed_3_11" name="__tabbed_3" type="radio" /><input id="__tabbed_3_12" name="__tabbed_3" type="radio" /><input id="__tabbed_3_13" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Python</label><label for="__tabbed_3_2">C++</label><label for="__tabbed_3_3">Java</label><label for="__tabbed_3_4">C#</label><label for="__tabbed_3_5">Go</label><label for="__tabbed_3_6">Swift</label><label for="__tabbed_3_7">JS</label><label for="__tabbed_3_8">TS</label><label for="__tabbed_3_9">Dart</label><label for="__tabbed_3_10">Rust</label><label for="__tabbed_3_11">C</label><label for="__tabbed_3_12">Kotlin</label><label for="__tabbed_3_13">Ruby</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -5222,13 +5222,13 @@
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Пусть баланс-фактор равен <span class="arithmatex">\(f\)</span> ; тогда для любого узла AVL-дерева выполняется <span class="arithmatex">\(-1 \le f \le 1\)</span> .</p>
+<p>Пусть баланс-фактор равен <span class="arithmatex">\(f\)</span>. Тогда для любого узла AVL-дерева выполняется <span class="arithmatex">\(-1 \le f \le 1\)</span> .</p>
 </div>
 <h2 id="752-avl-">7.5.2 &nbsp; Вращения AVL-дерева<a class="headerlink" href="#752-avl-" title="Permanent link">&para;</a></h2>
-<p>Особенность AVL-дерева заключается в операции "вращения", которая позволяет заново сбалансировать разбалансированный узел, не нарушая последовательность симметричного обхода двоичного дерева. Иначе говоря, <strong>операция вращения одновременно сохраняет свойство "двоичного дерева поиска" и возвращает дерево в состояние "сбалансированного двоичного дерева"</strong>.</p>
-<p>Узлы, для которых абсолютное значение баланс-фактора больше <span class="arithmatex">\(1\)</span> , мы называем "разбалансированными узлами". В зависимости от вида разбаланса вращения делятся на четыре типа: правое вращение, левое вращение, сначала левое затем правое, и сначала правое затем левое. Ниже разберем их подробно.</p>
+<p>Особенность AVL-дерева заключается в операции «вращения», которая позволяет заново сбалансировать разбалансированный узел, не нарушая последовательность симметричного обхода двоичного дерева. Иначе говоря, <strong>операция вращения одновременно сохраняет свойство «двоичного дерева поиска» и возвращает дерево в состояние «сбалансированного двоичного дерева»</strong>.</p>
+<p>Узлы, для которых абсолютное значение баланс-фактора больше <span class="arithmatex">\(1\)</span> , мы называем «разбалансированными узлами». В зависимости от вида разбаланса вращения делятся на четыре типа: правое вращение, левое вращение, сначала левое затем правое, и сначала правое затем левое. Ниже разберем их подробно.</p>
 <h3 id="1_1">1. &nbsp; Правое вращение<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
-<p>Как показано на рисунках ниже, под узлом указан его баланс-фактор. Если двигаться снизу вверх, то первым разбалансированным узлом в двоичном дереве будет "узел 3". Рассмотрим поддерево с этим узлом в качестве корня, обозначим данный узел как <code>node</code> , его левого дочернего узла как <code>child</code> и выполним "правое вращение". После завершения правого вращения поддерево снова станет сбалансированным и при этом сохранит свойство двоичного дерева поиска.</p>
+<p>Как показано на рисунке 7-26, под узлом указан его баланс-фактор. Если двигаться снизу вверх, то первым разбалансированным узлом в двоичном дереве будет «узел 3». Рассмотрим поддерево с этим узлом в качестве корня, обозначим данный узел как <code>node</code> , его левого дочернего узла как <code>child</code> и выполним «правое вращение». После завершения правого вращения поддерево снова станет сбалансированным и при этом сохранит свойство двоичного дерева поиска.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:4"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><input id="__tabbed_4_4" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">&lt;1&gt;</label><label for="__tabbed_4_2">&lt;2&gt;</label><label for="__tabbed_4_3">&lt;3&gt;</label><label for="__tabbed_4_4">&lt;4&gt;</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -5251,7 +5251,7 @@
 <p><img alt="Правое вращение при наличии grand_child" class="animation-figure" src="../avl_tree.assets/avltree_right_rotate_with_grandchild.png" /></p>
 <p align="center"> Рисунок 7-27 &nbsp; Правое вращение при наличии grand_child </p>
 
-<p>"Поворот вправо" - это лишь образное описание; в реальности он реализуется через изменение указателей узлов. Код приведен ниже:</p>
+<p>«Поворот вправо» - это лишь образное описание. В реальности он реализуется через изменение указателей узлов. Код приведен ниже:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:13"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><input id="__tabbed_5_4" name="__tabbed_5" type="radio" /><input id="__tabbed_5_5" name="__tabbed_5" type="radio" /><input id="__tabbed_5_6" name="__tabbed_5" type="radio" /><input id="__tabbed_5_7" name="__tabbed_5" type="radio" /><input id="__tabbed_5_8" name="__tabbed_5" type="radio" /><input id="__tabbed_5_9" name="__tabbed_5" type="radio" /><input id="__tabbed_5_10" name="__tabbed_5" type="radio" /><input id="__tabbed_5_11" name="__tabbed_5" type="radio" /><input id="__tabbed_5_12" name="__tabbed_5" type="radio" /><input id="__tabbed_5_13" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Python</label><label for="__tabbed_5_2">C++</label><label for="__tabbed_5_3">Java</label><label for="__tabbed_5_4">C#</label><label for="__tabbed_5_5">Go</label><label for="__tabbed_5_6">Swift</label><label for="__tabbed_5_7">JS</label><label for="__tabbed_5_8">TS</label><label for="__tabbed_5_9">Dart</label><label for="__tabbed_5_10">Rust</label><label for="__tabbed_5_11">C</label><label for="__tabbed_5_12">Kotlin</label><label for="__tabbed_5_13">Ruby</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -5470,11 +5470,11 @@
 </div>
 </div>
 <h3 id="2">2. &nbsp; Левое вращение<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
-<p>Соответственно, если рассмотреть "зеркальную" версию приведенного выше разбалансированного двоичного дерева, то понадобится выполнить "левое вращение", показанное на рисунке 7-28.</p>
+<p>Соответственно, если рассмотреть «зеркальную» версию приведенного выше разбалансированного двоичного дерева, то понадобится выполнить «левое вращение», показанное на рисунке 7-28.</p>
 <p><img alt="Левое вращение" class="animation-figure" src="../avl_tree.assets/avltree_left_rotate.png" /></p>
 <p align="center"> Рисунок 7-28 &nbsp; Левое вращение </p>
 
-<p>По той же причине, когда у узла <code>child</code> есть левый дочерний узел, который обозначим как <code>grand_child</code> , в левое вращение также требуется добавить шаг: сделать <code>grand_child</code> правым дочерним узлом <code>node</code> .</p>
+<p>Аналогичная ситуация показана на рисунке 7-29. Если у узла <code>child</code> есть левый дочерний узел, который обозначим как <code>grand_child</code> , то в левое вращение также требуется добавить шаг: сделать <code>grand_child</code> правым дочерним узлом <code>node</code> .</p>
 <p><img alt="Левое вращение при наличии grand_child" class="animation-figure" src="../avl_tree.assets/avltree_left_rotate_with_grandchild.png" /></p>
 <p align="center"> Рисунок 7-29 &nbsp; Левое вращение при наличии grand_child </p>
 
@@ -5697,21 +5697,21 @@
 </div>
 </div>
 <h3 id="3">3. &nbsp; Сначала левое, затем правое вращение<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
-<p>Для разбалансированного узла 3 на рисунке 7-30 ни одно лишь левое вращение, ни одно лишь правое вращение не способны вернуть поддерево в баланс. В этом случае нужно сначала выполнить "левое вращение" для <code>child</code> , а затем выполнить "правое вращение" для <code>node</code> .</p>
+<p>Для разбалансированного узла 3 на рисунке 7-30 ни одно лишь левое вращение, ни одно лишь правое вращение не способны вернуть поддерево в баланс. В этом случае нужно сначала выполнить «левое вращение» для <code>child</code> , а затем выполнить «правое вращение» для <code>node</code> .</p>
 <p><img alt="Сначала левое, затем правое вращение" class="animation-figure" src="../avl_tree.assets/avltree_left_right_rotate.png" /></p>
 <p align="center"> Рисунок 7-30 &nbsp; Сначала левое, затем правое вращение </p>
 
 <h3 id="4">4. &nbsp; Сначала правое, затем левое вращение<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
-<p>Как показано на рисунке 7-31, для зеркальной ситуации предыдущего разбалансированного двоичного дерева нужно сначала выполнить "правое вращение" для <code>child</code> , а затем "левое вращение" для <code>node</code> .</p>
+<p>Как показано на рисунке 7-31, для зеркальной ситуации предыдущего разбалансированного двоичного дерева нужно сначала выполнить «правое вращение» для <code>child</code> , а затем «левое вращение» для <code>node</code> .</p>
 <p><img alt="Сначала правое, затем левое вращение" class="animation-figure" src="../avl_tree.assets/avltree_right_left_rotate.png" /></p>
 <p align="center"> Рисунок 7-31 &nbsp; Сначала правое, затем левое вращение </p>
 
 <h3 id="5">5. &nbsp; Выбор вращения<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
-<p>Четыре вида разбаланса, показанные на рисунке 7-32, по одному соответствуют рассмотренным выше случаям; для них соответственно требуются правое вращение, сначала левое затем правое, сначала правое затем левое и левое вращение.</p>
+<p>Четыре вида разбаланса, показанные на рисунке 7-32, по одному соответствуют рассмотренным выше случаям. Для них соответственно требуются правое вращение, сначала левое затем правое, сначала правое затем левое и левое вращение.</p>
 <p><img alt="Четыре случая вращений AVL-дерева" class="animation-figure" src="../avl_tree.assets/avltree_rotation_cases.png" /></p>
 <p align="center"> Рисунок 7-32 &nbsp; Четыре случая вращений AVL-дерева </p>
 
-<p>Как показано в таблице 7-3, мы определяем, какому из этих четырех случаев соответствует разбалансированный узел, по знаку баланс-фактора самого разбалансированного узла и по знаку баланс-фактора дочернего узла на более высокой стороне.</p>
+<p>Как показано в таблице 7-3, мы определяем, какому из случаев на рисунке 7-32 соответствует разбалансированный узел, по знаку баланс-фактора самого разбалансированного узла и по знаку баланс-фактора дочернего узла на более высокой стороне.</p>
 <p align="center"> Таблица 7-3 &nbsp; Условия выбора для четырех случаев вращений </p>
 
 <div class="center-table">

@@ -4385,7 +4385,7 @@
 <p>Даны две строки <span class="arithmatex">\(s\)</span> и <span class="arithmatex">\(t\)</span> . Верните минимальное число шагов редактирования, необходимое для преобразования <span class="arithmatex">\(s\)</span> в <span class="arithmatex">\(t\)</span> .</p>
 <p>Для строки допускаются три операции редактирования: вставка одного символа, удаление одного символа и замена одного символа на произвольный другой символ.</p>
 </div>
-<p>Как показано на рисунке 14-27, для преобразования <code>kitten</code> в <code>sitting</code> требуется 3 шага редактирования: 2 операции замены и 1 операция вставки; для преобразования <code>hello</code> в <code>algo</code> также требуется 3 шага: 2 замены и 1 удаление.</p>
+<p>Как показано на рисунке 14-27, для преобразования <code>kitten</code> в <code>sitting</code> требуется 3 шага редактирования: 2 операции замены и 1 операция вставки. Для преобразования <code>hello</code> в <code>algo</code> также требуется 3 шага: 2 замены и 1 удаление.</p>
 <p><img alt="Пример данных для задачи о расстоянии редактирования" class="animation-figure" src="../edit_distance_problem.assets/edit_distance_example.png" /></p>
 <p align="center"> Рисунок 14-27 &nbsp; Пример данных для задачи о расстоянии редактирования </p>
 
@@ -4398,7 +4398,7 @@
 <h3 id="1">1. &nbsp; Идея динамического программирования<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
 <p><strong>Шаг 1: продумать решения на каждом раунде, определить состояние и тем самым получить таблицу <span class="arithmatex">\(dp\)</span></strong></p>
 <p>На каждом раунде решение состоит в выполнении одной операции редактирования над строкой <span class="arithmatex">\(s\)</span> .</p>
-<p>Нам нужно, чтобы в ходе выполнения операций размер задачи постепенно уменьшался; только тогда можно строить подзадачи. Пусть длины строк <span class="arithmatex">\(s\)</span> и <span class="arithmatex">\(t\)</span> равны соответственно <span class="arithmatex">\(n\)</span> и <span class="arithmatex">\(m\)</span> ; сначала рассмотрим последние символы этих строк, то есть <span class="arithmatex">\(s[n-1]\)</span> и <span class="arithmatex">\(t[m-1]\)</span> .</p>
+<p>Нам нужно, чтобы в ходе выполнения операций размер задачи постепенно уменьшался. Только тогда можно строить подзадачи. Пусть длины строк <span class="arithmatex">\(s\)</span> и <span class="arithmatex">\(t\)</span> равны соответственно <span class="arithmatex">\(n\)</span> и <span class="arithmatex">\(m\)</span>. Сначала рассмотрим последние символы этих строк, то есть <span class="arithmatex">\(s[n-1]\)</span> и <span class="arithmatex">\(t[m-1]\)</span> .</p>
 <ul>
 <li>Если <span class="arithmatex">\(s[n-1]\)</span> и <span class="arithmatex">\(t[m-1]\)</span> совпадают, их можно просто пропустить и сразу перейти к сравнению <span class="arithmatex">\(s[n-2]\)</span> и <span class="arithmatex">\(t[m-2]\)</span> .</li>
 <li>Если <span class="arithmatex">\(s[n-1]\)</span> и <span class="arithmatex">\(t[m-1]\)</span> различны, нужно выполнить над <span class="arithmatex">\(s\)</span> одну операцию редактирования (вставку, удаление или замену), чтобы последние символы стали одинаковыми, после чего можно перейти к задаче меньшего размера.</li>
@@ -4409,9 +4409,9 @@
 <p><strong>Шаг 2: найти оптимальную подструктуру и на ее основе вывести уравнение перехода состояния</strong></p>
 <p>Рассмотрим подзадачу <span class="arithmatex">\(dp[i, j]\)</span> . Ее последние символы - это <span class="arithmatex">\(s[i-1]\)</span> и <span class="arithmatex">\(t[j-1]\)</span> . В зависимости от операции редактирования возможны три случая, показанные на рисунке 14-29.</p>
 <ol>
-<li>Вставить после <span class="arithmatex">\(s[i-1]\)</span> символ <span class="arithmatex">\(t[j-1]\)</span> ; тогда остается подзадача <span class="arithmatex">\(dp[i, j-1]\)</span> .</li>
-<li>Удалить <span class="arithmatex">\(s[i-1]\)</span> ; тогда остается подзадача <span class="arithmatex">\(dp[i-1, j]\)</span> .</li>
-<li>Заменить <span class="arithmatex">\(s[i-1]\)</span> на <span class="arithmatex">\(t[j-1]\)</span> ; тогда остается подзадача <span class="arithmatex">\(dp[i-1, j-1]\)</span> .</li>
+<li>Вставить после <span class="arithmatex">\(s[i-1]\)</span> символ <span class="arithmatex">\(t[j-1]\)</span>. Тогда остается подзадача <span class="arithmatex">\(dp[i, j-1]\)</span> .</li>
+<li>Удалить <span class="arithmatex">\(s[i-1]\)</span>. Тогда остается подзадача <span class="arithmatex">\(dp[i-1, j]\)</span> .</li>
+<li>Заменить <span class="arithmatex">\(s[i-1]\)</span> на <span class="arithmatex">\(t[j-1]\)</span>. Тогда остается подзадача <span class="arithmatex">\(dp[i-1, j-1]\)</span> .</li>
 </ol>
 <p><img alt="Переходы состояния в задаче о расстоянии редактирования" class="animation-figure" src="../edit_distance_problem.assets/edit_distance_state_transfer.png" /></p>
 <p align="center"> Рисунок 14-29 &nbsp; Переходы состояния в задаче о расстоянии редактирования </p>
@@ -4865,7 +4865,7 @@ dp[i, j] = dp[i-1, j-1]
 
 <h3 id="3">3. &nbsp; Оптимизация пространства<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
 <p>Поскольку <span class="arithmatex">\(dp[i,j]\)</span> зависит от значения сверху <span class="arithmatex">\(dp[i-1, j]\)</span> , слева <span class="arithmatex">\(dp[i, j-1]\)</span> и слева сверху <span class="arithmatex">\(dp[i-1, j-1]\)</span> , прямой обход после оптимизации памяти теряет значение слева сверху, а обратный обход не позволяет заранее построить значение слева <span class="arithmatex">\(dp[i, j-1]\)</span> . Значит, оба наивных варианта обхода здесь непригодны.</p>
-<p>Чтобы решить эту проблему, можно использовать переменную <code>leftup</code> для временного сохранения значения слева сверху <span class="arithmatex">\(dp[i-1, j-1]\)</span> ; после этого остается учитывать только верхнее и левое значения. Тогда ситуация становится аналогичной задаче о полном рюкзаке, и можно выполнять прямой обход. Код приведен ниже:</p>
+<p>Чтобы решить эту проблему, можно использовать переменную <code>leftup</code> для временного сохранения значения слева сверху <span class="arithmatex">\(dp[i-1, j-1]\)</span>. После этого остается учитывать только верхнее и левое значения. Тогда ситуация становится аналогичной задаче о полном рюкзаке, и можно выполнять прямой обход. Код приведен ниже:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="3:13"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><input id="__tabbed_3_5" name="__tabbed_3" type="radio" /><input id="__tabbed_3_6" name="__tabbed_3" type="radio" /><input id="__tabbed_3_7" name="__tabbed_3" type="radio" /><input id="__tabbed_3_8" name="__tabbed_3" type="radio" /><input id="__tabbed_3_9" name="__tabbed_3" type="radio" /><input id="__tabbed_3_10" name="__tabbed_3" type="radio" /><input id="__tabbed_3_11" name="__tabbed_3" type="radio" /><input id="__tabbed_3_12" name="__tabbed_3" type="radio" /><input id="__tabbed_3_13" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Python</label><label for="__tabbed_3_2">C++</label><label for="__tabbed_3_3">Java</label><label for="__tabbed_3_4">C#</label><label for="__tabbed_3_5">Go</label><label for="__tabbed_3_6">Swift</label><label for="__tabbed_3_7">JS</label><label for="__tabbed_3_8">TS</label><label for="__tabbed_3_9">Dart</label><label for="__tabbed_3_10">Rust</label><label for="__tabbed_3_11">C</label><label for="__tabbed_3_12">Kotlin</label><label for="__tabbed_3_13">Ruby</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">

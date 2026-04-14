@@ -4403,10 +4403,10 @@
 <h1 id="119">11.9 &nbsp; Сортировка подсчетом<a class="headerlink" href="#119" title="Permanent link">&para;</a></h1>
 <p><u>Сортировка подсчетом (counting sort)</u> реализует сортировку за счет подсчета количества вхождений элементов и обычно используется для массивов целых чисел.</p>
 <h2 id="1191">11.9.1 &nbsp; Простая реализация<a class="headerlink" href="#1191" title="Permanent link">&para;</a></h2>
-<p>Сначала рассмотрим простой пример. Дан массив <code>nums</code> длины <span class="arithmatex">\(n\)</span> , элементы которого являются "неотрицательными целыми числами". Общий процесс сортировки подсчетом показан на рисунке 11-16.</p>
+<p>Сначала рассмотрим простой пример. Дан массив <code>nums</code> длины <span class="arithmatex">\(n\)</span> , элементы которого являются «неотрицательными целыми числами». Общий процесс сортировки подсчетом показан на рисунке 11-16.</p>
 <ol>
 <li>Пройти по массиву, найти в нем максимальное число, обозначить его как <span class="arithmatex">\(m\)</span> , а затем создать вспомогательный массив <code>counter</code> длины <span class="arithmatex">\(m + 1\)</span> .</li>
-<li><strong>С помощью <code>counter</code> подсчитать, сколько раз каждое число встречается в <code>nums</code></strong>; при этом <code>counter[num]</code> хранит число вхождений значения <code>num</code> . Делается это просто: достаточно пройти по <code>nums</code> (пусть текущее число равно <code>num</code> ) и на каждом шаге увеличить <code>counter[num]</code> на <span class="arithmatex">\(1\)</span> .</li>
+<li><strong>С помощью <code>counter</code> подсчитать, сколько раз каждое число встречается в <code>nums</code></strong>. При этом <code>counter[num]</code> хранит число вхождений значения <code>num</code> . Делается это просто: достаточно пройти по <code>nums</code> (пусть текущее число равно <code>num</code> ) и на каждом шаге увеличить <code>counter[num]</code> на <span class="arithmatex">\(1\)</span> .</li>
 <li><strong>Поскольку индексы массива <code>counter</code> изначально упорядочены, можно считать, что все числа уже отсортированы</strong>. Далее остается пройти по <code>counter</code> и в соответствии с числом вхождений записать значения обратно в <code>nums</code> в порядке возрастания.</li>
 </ol>
 <p><img alt="Процесс сортировки подсчетом" class="animation-figure" src="../counting_sort.assets/counting_sort_overview.png" /></p>
@@ -4743,7 +4743,7 @@
 </div>
 <h2 id="1192">11.9.2 &nbsp; Полная реализация<a class="headerlink" href="#1192" title="Permanent link">&para;</a></h2>
 <p>Внимательный читатель мог заметить, что <strong>если входные данные представлены объектами, то описанный выше шаг <code>3.</code> перестает работать</strong>. Например, если входными данными являются объекты товаров и мы хотим отсортировать их по цене (полю класса), то описанный алгоритм сможет выдать только отсортированный ряд цен, но не исходные объекты в нужном порядке.</p>
-<p>Как же получить корректный порядок исходных данных? Сначала вычислим "префиксную сумму" массива <code>counter</code> . Как следует из названия, префиксная сумма в индексе <code>i</code> , обозначаемая как <code>prefix[i]</code> , равна сумме первых <code>i</code> элементов массива:</p>
+<p>Как же получить корректный порядок исходных данных? Сначала вычислим «префиксную сумму» массива <code>counter</code> . Как следует из названия, префиксная сумма в индексе <code>i</code> , обозначаемая как <code>prefix[i]</code> , равна сумме первых <code>i</code> элементов массива:</p>
 <div class="arithmatex">\[
 \text{prefix}[i] = \sum_{j=0}^i \text{counter[j]}
 \]</div>
@@ -4752,7 +4752,7 @@
 <li>Записать <code>num</code> в массив <code>res</code> по индексу <code>prefix[num] - 1</code> .</li>
 <li>Уменьшить префиксную сумму <code>prefix[num]</code> на <span class="arithmatex">\(1\)</span> , чтобы получить индекс следующего размещения элемента <code>num</code> .</li>
 </ol>
-<p>После завершения прохода массив <code>res</code> будет содержать отсортированный результат; остается только переписать <code>res</code> обратно в <code>nums</code> . Полный процесс сортировки подсчетом показан на рисунке 11-17.</p>
+<p>После завершения прохода массив <code>res</code> будет содержать отсортированный результат. Остается только переписать <code>res</code> обратно в <code>nums</code> . Полный процесс сортировки подсчетом показан на рисунке 11-17.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:8"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><input id="__tabbed_2_6" name="__tabbed_2" type="radio" /><input id="__tabbed_2_7" name="__tabbed_2" type="radio" /><input id="__tabbed_2_8" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">&lt;1&gt;</label><label for="__tabbed_2_2">&lt;2&gt;</label><label for="__tabbed_2_3">&lt;3&gt;</label><label for="__tabbed_2_4">&lt;4&gt;</label><label for="__tabbed_2_5">&lt;5&gt;</label><label for="__tabbed_2_6">&lt;6&gt;</label><label for="__tabbed_2_7">&lt;7&gt;</label><label for="__tabbed_2_8">&lt;8&gt;</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -5233,7 +5233,7 @@
 <ul>
 <li><strong>Временная сложность равна <span class="arithmatex">\(O(n + m)\)</span>, алгоритм не является адаптивным</strong> : необходимо пройти по <code>nums</code> и по <code>counter</code> , а оба этих прохода занимают линейное время. Обычно выполняется <span class="arithmatex">\(n \gg m\)</span> , поэтому временная сложность стремится к <span class="arithmatex">\(O(n)\)</span> .</li>
 <li><strong>Пространственная сложность равна <span class="arithmatex">\(O(n + m)\)</span>, сортировка не выполняется на месте</strong>: используются массивы <code>res</code> и <code>counter</code> длины <span class="arithmatex">\(n\)</span> и <span class="arithmatex">\(m\)</span> соответственно.</li>
-<li><strong>Стабильная сортировка</strong>: порядок заполнения <code>res</code> идет "справа налево", поэтому обратный проход по <code>nums</code> позволяет сохранить относительный порядок равных элементов и тем самым реализовать стабильную сортировку. Вообще говоря, прямой проход по <code>nums</code> тоже даст правильный результат сортировки, но он будет нестабильным.</li>
+<li><strong>Стабильная сортировка</strong>: порядок заполнения <code>res</code> идет «справа налево», поэтому обратный проход по <code>nums</code> позволяет сохранить относительный порядок равных элементов и тем самым реализовать стабильную сортировку. Вообще говоря, прямой проход по <code>nums</code> тоже даст правильный результат сортировки, но он будет нестабильным.</li>
 </ul>
 <h2 id="1194">11.9.4 &nbsp; Ограничения<a class="headerlink" href="#1194" title="Permanent link">&para;</a></h2>
 <p>На этом этапе сортировка подсчетом может показаться очень изящной: она позволяет эффективно сортировать данные, опираясь только на подсчет числа вхождений. Однако условия ее применения довольно строгие.</p>
